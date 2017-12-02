@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+	<title>Quiz of the Rings</title>
+	<link rel= "stylesheet" href= "style.css" type= "text/css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header role="banner">
+		<h1>Quiz of the Rings</h1>
+	</header>
+	<main role="main">
+		<div class="quizContainer">
+			<div class="home">
+				<img id="homeIMG" src= "https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/f0f72953-7f64-4530-9c8a-c24f3a2f4fee.jpg._CB304080866__SL300__.jpg" alt="LOTR">
+				<p>Enter if you dare&#33;</p>
+				<button type="button" id="start">Click here to start&#33;</button>
+			</div>
+			<div id="quizCard" class="hidden">
+				<h3 class="questionText"></h3>
+				<form class="quizAnswers">
+				</form>
+				<input type="submit" id="submitAnswer" data-alert-open="alert-feedback"><br>
+				<div class=questionInfo>
+					<span id="questionNumber">Question:</span><span id="numberCorrect">Number correct:</span>
+				</div>
+			</div>
+			<div class="hidden" id="feedback" data-alert="alert-feedback">
+			</div>
+			<div class= "hidden" id="finalResults">
+			</div>
+		</div>
+ </main>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>

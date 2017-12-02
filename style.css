@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+body {
+	background-color: black;
+	text-align: center;
+	display: block;
+	width: 75%;
+	margin: auto;
+	margin-bottom: 30px;
+	
+	
+}
+
+header {
+	background-color: white;
+	font-size: 4vw;
+	margin: 30px 0 30px 0;
+}
+
+.quizContainer {
+	padding: 50px 50px 50px 50px;
+	background-color: white;
+	font-weight: bold;
+	font-size: 4vw;
+	border: solid black 2px;
+	border-radius: 10px;
+	margin: 30px 0 30px 0;
+}
+
+#quizcard {
+	font-size: 4vw;
+}
+
+#homeIMG {
+	width: 80%;
+}
+
+button {
+	background-color: yellow;
+	font-weight: bold;
+	font-size: 4vw;
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+form {
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+#questionNumber {
+	float: left;
+}
+
+#numberCorrect {
+	float: right;
+}
+
+#imgFeedback {
+	width: 80%;
+}
+
+.buttonFeedback {
+	float: right;
+	font-size: 3vw;
+}
+
+#submitAnswer {
+	float:left;
+	background-color: yellow;
+	font-weight: bold;
+}
+
+#feedback {
+	font-size: 3vw;
+}
+
+#resultsImage {
+	width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+
+  #imgFeedback {
+	width: 400px;
+	height: 400px;
+ }
+  
+  #quizcard {
+	font-size: 2vw;
+ }
+  
+  #homeIMG {
+    width: 350px;
+  }
+
+  header {
+  	font-size: 35px;
+  }
+
+  .quizContainer {
+  	font-size: 25px;
+  }
+
+  button {
+  	font-size: 20px;
+  }
+
+  .buttonFeedback {
+  	font-size: 25px;
+  }
+
+  #feedback {
+  	font-size: 25px;
+  }
+
+}
