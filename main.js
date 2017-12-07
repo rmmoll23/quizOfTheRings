@@ -1,11 +1,11 @@
 'use strict';
 
 const questionsArray = [
-  { 
-    question:  "Who was the creator of the one ring to rule them all?",
-    answers: ["Frodo", "Golem", "Gandalf", "Sauron"],
-    correctAnswer: "Sauron"
-  },
+  // { 
+  //   question:  "Who was the creator of the one ring to rule them all?",
+  //   answers: ["Frodo", "Golem", "Gandalf", "Sauron"],
+  //   correctAnswer: "Sauron"
+  // },
 
   // { 
   //   question:  "Which hobbit accompanied Frodo into Mordor?",
@@ -37,25 +37,24 @@ const questionsArray = [
   //   correctAnswer: "Spider"
   // },
 
-  // { 
-  //   question:  "What age did Bilbo turn on his birthday in The Fellowship of the Ring?",
-  //   answers: [72, 97, 143, 111],
-  //   correctAnswer:  111
-  // },
+  { 
+    question:  "What age did Bilbo turn on his birthday in The Fellowship of the Ring?",
+    answers: [72, 97, 143, 111],
+    correctAnswer:  111
+  },
 
-  // { 
-  //   question: "Aragorn summoned the aid of an army of ”what” to the battle on Pelennor Fields?",
-  //   answers: ["Dwarves", "Wolves", "the Dead", "Eagles"],
-  //   correctAnswer: "the Dead"
+  { 
+    question: "Aragorn summoned the aid of an army of ”what” to the battle on Pelennor Fields?",
+    answers: ["Dwarves", "Wolves", "the Dead", "Eagles"],
+    correctAnswer: "the Dead"
 
-  // },
+  },
 
-  // { 
-  //   question:  "How many members were in the company called the fellowship of the ring?",
-  //   answers: [5, 8, 7, 9],
-  //   correctAnswer: 9
-  // },
-
+  { 
+    question:  "How many members were in the company called the fellowship of the ring?",
+    answers: [5, 8, 7, 9],
+    correctAnswer: 9
+  },
 
   { 
     question:  "What was the name of the dwarf in the company?",
@@ -98,7 +97,6 @@ function registerHandlers(){
   // When a user clicks the start button
   $(".home").off();
   $(".home").on("click", "#start", function() {
-    console.log("start#");
     $(".home").addClass("hidden");
     $("#quizCard").removeClass("hidden");
     renderQuizCard();
@@ -107,16 +105,21 @@ function registerHandlers(){
   // When a user submits an answer
   $("#quizCard").off();
   $("#quizCard").on("click", "#submitAnswer", function(event) {
-    console.log("submit#");
     event.preventDefault();
     const userChoice=$('input[name="answer"]:checked').val();
     checkAnswer(userChoice);
-  });    
+  }); 
+
+  // $(document).keyup(function(event) {
+  //   console.log(event);
+  //   if (event.keyCode === 13) {
+
+  //   }
+  // });   
 
   // Go to next question
   $("#feedback").off();
   $("#feedback").on("click", "#next", function() {
-    console.log("next#");
     stateIncrementIndex();
     if (getQuestionNumber() > questionsArray.length) {
       $("#feedback").addClass("hidden");
@@ -165,7 +168,7 @@ function questionInfo() {
 function renderAnswers(array) { 
   $(".quizAnswers").empty();
   array[stateGetCurrentIndex()].answers.map(function(item, i) {
-    const template=`<input id="answerChoices" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
+    const template=`<input id="answerChoices" type="radio" name="answer" value=${item} required><span>${item}</span><br>`;
     $(".quizAnswers").append(template);
   });
 }
@@ -201,7 +204,10 @@ function createFailView(){
 }
 
 function checkAnswer(userChoice) {
-  if (userChoice == getAnswer(stateGetCurrentIndex())) {
+  let currentAnswer = getAnswer(stateGetCurrentIndex());
+  console.log(userChoice, currentAnswer);
+  
+  if (userChoice === currentAnswer.toString()) {
     alertFeedback(true);
   }
   else if (userChoice === undefined) {
@@ -227,10 +233,6 @@ function alertFeedback(result) {
   
   $("#quizCard").addClass("hidden");
   $("#feedback").removeClass("hidden");
-
-  // Loaded a new view, register handlers again.
-  // Don't worry, we clear existing handlers
-  
 }
 
 function renderFinalResults() {
@@ -250,6 +252,6 @@ function startQuiz(){
   registerHandlers();
 }
 
-// when the page loads, call `handleQuiz`
+// when the page loads, call `startQuiz`
 $(startQuiz);
 

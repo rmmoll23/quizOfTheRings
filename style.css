@@ -10,8 +10,6 @@ body {
 	width: 75%;
 	margin: auto;
 	margin-bottom: 30px;
-	
-	
 }
 
 header {
@@ -20,8 +18,13 @@ header {
 	margin: 30px 0 30px 0;
 }
 
+.home {
+	margin: auto;
+}
+
 .quizContainer {
-	padding: 50px 50px 50px 50px;
+	display: flex;
+	padding: 40px 40px 40px 40px;
 	background-color: white;
 	font-weight: bold;
 	font-size: 4vw;
@@ -32,6 +35,7 @@ header {
 
 #quizcard {
 	font-size: 4vw;
+	width: 100%;
 }
 
 #homeIMG {
@@ -41,8 +45,9 @@ header {
 button {
 	background-color: yellow;
 	font-weight: bold;
-	font-size: 4vw;
+	font-size: 3vw;
 	cursor: pointer;
+	padding: 5px;
 }
 
 .hidden {
@@ -54,51 +59,42 @@ form {
 	margin-bottom: 50px;
 }
 
-#questionNumber {
-	float: left;
+#submitAnswer {
+	float:left;
+	background-color: yellow;
+	font-weight: bold;
+	font-size: 3vw;
+	padding: 5px;
 }
 
-#numberCorrect {
+.questionInfo {
 	float: right;
+	font-size: 3vw;
+	padding: 5px;
+}
+
+#feedback {
+	font-size: 3vw;
+	margin: auto;
+}
+
+.buttonFeedback {
+	font-size: 3vw;
 }
 
 #imgFeedback {
 	width: 80%;
 }
 
-.buttonFeedback {
-	float: right;
-	font-size: 3vw;
-}
-
-#submitAnswer {
-	float:left;
-	background-color: yellow;
-	font-weight: bold;
-}
-
-#feedback {
-	font-size: 3vw;
+#finalResults {
+	margin: auto;
 }
 
 #resultsImage {
 	width: 100%;
 }
 
-@media only screen and (min-width: 800px) {
-
-  #imgFeedback {
-	width: 400px;
-	height: 400px;
- }
-  
-  #quizcard {
-	font-size: 2vw;
- }
-  
-  #homeIMG {
-    width: 350px;
-  }
+@media only screen and (min-width: 640px) {
 
   header {
   	font-size: 35px;
@@ -108,16 +104,37 @@ form {
   	font-size: 25px;
   }
 
+  #homeIMG {
+    width: 350px;
+  }
+  
+  #quizcard {
+	font-size: 2vw;
+  }
+ 
   button {
   	font-size: 20px;
+  }
+
+  #submitAnswer {
+  	font-size: 2vw;
+  }
+
+  .questionInfo {
+  	font-size: 2vw;
+  }
+
+  #feedback {
+  	font-size: 25px;
   }
 
   .buttonFeedback {
   	font-size: 25px;
   }
 
-  #feedback {
-  	font-size: 25px;
+  #imgFeedback {
+	width: 400px;
+	height: 400px;
   }
 
 }
