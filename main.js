@@ -1,41 +1,41 @@
 'use strict';
 
 const questionsArray = [
-  // { 
-  //   question:  "Who was the creator of the one ring to rule them all?",
-  //   answers: ["Frodo", "Golem", "Gandalf", "Sauron"],
-  //   correctAnswer: "Sauron"
-  // },
+  { 
+    question:  "Who was the creator of the one ring to rule them all?",
+    answers: ["Frodo", "Golem", "Gandalf", "Sauron"],
+    correctAnswer: "Sauron"
+  },
 
-  // { 
-  //   question:  "Which hobbit accompanied Frodo into Mordor?",
-  //   answers: ["Merry", "Pippin", "Samwise", "Bilbo"],
-  //   correctAnswer:  "Samwise"
-  // },
+  { 
+    question:  "Which hobbit accompanied Frodo into Mordor?",
+    answers: ["Merry", "Pippin", "Samwise", "Bilbo"],
+    correctAnswer:  "Samwise"
+  },
 
-  // { 
-  //   question:  "Aragon was the true heir to the throne of which kingdom?",
-  //   answers: ["Gondor", "Rohan", "Numenor", "Dale"],
-  //   correctAnswer:  "Gondor"
-  // },
+  { 
+    question:  "Aragon was the true heir to the throne of which kingdom?",
+    answers: ["Gondor", "Rohan", "Numenor", "Dale"],
+    correctAnswer:  "Gondor"
+  },
 
-  // { 
-  //   question: "Who betrayed Frodo in The Fellowship of the Ring?",
-  //   answers: ["Faromir", "Boromir", "Saruman", "Gandalf"],
-  //   correctAnswer:  "Boromir"
-  // },
+  { 
+    question: "Who betrayed Frodo in The Fellowship of the Ring?",
+    answers: ["Faromir", "Boromir", "Saruman", "Gandalf"],
+    correctAnswer:  "Boromir"
+  },
 
-  // { 
-  //   question:  "What is the name of Aragorn’s love?",
-  //   answers: ["Eowyn", "Galadriel", "Arwen", "Morwen"],
-  //   correctAnswer: "Arwen"
-  // },
+  { 
+    question:  "What is the name of Aragorn’s love?",
+    answers: ["Eowyn", "Galadriel", "Arwen", "Morwen"],
+    correctAnswer: "Arwen"
+  },
 
-  // { 
-  //   question:  "What kind of creature was Shelob?",
-  //   answers: ["Troll", "Dragon", "Snake", "Spider"],
-  //   correctAnswer: "Spider"
-  // },
+  { 
+    question:  "What kind of creature was Shelob?",
+    answers: ["Troll", "Dragon", "Snake", "Spider"],
+    correctAnswer: "Spider"
+  },
 
   { 
     question:  "What age did Bilbo turn on his birthday in The Fellowship of the Ring?",
