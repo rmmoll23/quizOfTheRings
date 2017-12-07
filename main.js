@@ -108,14 +108,15 @@ function registerHandlers(){
     event.preventDefault();
     const userChoice=$('input[name="answer"]:checked').val();
     checkAnswer(userChoice);
-  }); 
+  });  
 
-  // $(document).keyup(function(event) {
-  //   console.log(event);
-  //   if (event.keyCode === 13) {
-
-  //   }
-  // });   
+   // Submits answer when "enter" is hit
+  $(".quizAnswers").keydown(function(event) {
+    console.log("keyboard");
+    if (event.keyCode === 13) {
+      $("#submitAnswer").click();
+    }
+  });  
 
   // Go to next question
   $("#feedback").off();
@@ -167,8 +168,8 @@ function questionInfo() {
 
 function renderAnswers(array) { 
   $(".quizAnswers").empty();
-  array[stateGetCurrentIndex()].answers.map(function(item, i) {
-    const template=`<input id="answerChoices" type="radio" name="answer" value=${item} required><span>${item}</span><br>`;
+  array[stateGetCurrentIndex()].answers.map(function(item) {
+    const template=`<input id="answerChoices" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
     $(".quizAnswers").append(template);
   });
 }
@@ -205,9 +206,8 @@ function createFailView(){
 
 function checkAnswer(userChoice) {
   let currentAnswer = getAnswer(stateGetCurrentIndex());
-  console.log(userChoice, currentAnswer);
   
-  if (userChoice === currentAnswer.toString()) {
+  if (userChoice == currentAnswer) {
     alertFeedback(true);
   }
   else if (userChoice === undefined) {
