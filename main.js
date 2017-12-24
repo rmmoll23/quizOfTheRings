@@ -111,7 +111,7 @@ function registerHandlers(){
   });  
 
    // Submits answer when "enter" is hit
-  $(".quizAnswers").keydown(function(event) {
+  $(".quizAnswers").keyup(function(event) {
     console.log("keyboard");
     if (event.keyCode === 13) {
       $("#submitAnswer").click();
@@ -169,7 +169,7 @@ function questionInfo() {
 function renderAnswers(array) { 
   $(".quizAnswers").empty();
   array[stateGetCurrentIndex()].answers.map(function(item) {
-    const template=`<input id="answerChoices" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
+    const template=`<label for="answerChoices"></label><input class="answerChoices" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
     $(".quizAnswers").append(template);
   });
 }
@@ -206,6 +206,7 @@ function createFailView(){
 
 function checkAnswer(userChoice) {
   let currentAnswer = getAnswer(stateGetCurrentIndex());
+  console.log(userChoice, currentAnswer);
   
   if (userChoice == currentAnswer) {
     alertFeedback(true);
