@@ -43,7 +43,7 @@ header {
 }
 
 button {
-	background-color: yellow;
+	background-color: lightgray;
 	font-weight: bold;
 	font-size: 3vw;
 	cursor: pointer;
@@ -61,7 +61,7 @@ form {
 
 #submitAnswer {
 	float:left;
-	background-color: yellow;
+	background-color: lightgray;
 	font-weight: bold;
 	font-size: 3vw;
 	padding: 5px;
