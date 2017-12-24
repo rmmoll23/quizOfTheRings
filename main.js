@@ -168,8 +168,8 @@ function questionInfo() {
 
 function renderAnswers(array) { 
   $(".quizAnswers").empty();
-  array[stateGetCurrentIndex()].answers.map(function(item) {
-    const template=`<label for="answerChoices"></label><input class="answerChoices" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
+  array[stateGetCurrentIndex()].answers.map(function(item, index) {
+    const template=`<label for="answerChoices${index}"></label><input id="answerChoices${index}" type="radio" name="answer${index}" value="${item}" required><span>${item}</span><br>`;
     $(".quizAnswers").append(template);
   });
 }
