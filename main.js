@@ -169,8 +169,10 @@ function questionInfo() {
 
 function renderAnswers(array) { 
   $(".quizAnswers").empty();
+
   array[stateGetCurrentIndex()].answers.map(function(item, index) {
-    const template=`<label for="answerChoices${index}"></label><input id="answerChoices${index}" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
+    const template=`<label for="answerChoices"></label><input id="answerChoices${index}" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
+
     $(".quizAnswers").append(template);
   });
 }
