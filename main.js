@@ -106,7 +106,8 @@ function registerHandlers(){
   $("#quizCard").off();
   $("#quizCard").on("click", "#submitAnswer", function(event) {
     event.preventDefault();
-    const userChoice=$('input[name="answer"]:checked').val();
+    const userChoice = $('input[name="answer"]:checked').val();
+    console.log(userChoice);
     checkAnswer(userChoice);
   });  
 
@@ -168,8 +169,10 @@ function questionInfo() {
 
 function renderAnswers(array) { 
   $(".quizAnswers").empty();
-  array[stateGetCurrentIndex()].answers.map(function(item) {
-    const template=`<label for="answerChoices"></label><input class="answerChoices" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
+
+  array[stateGetCurrentIndex()].answers.map(function(item, index) {
+    const template=`<label for="answerChoices"></label><input id="answerChoices${index}" type="radio" name="answer" value="${item}" required><span>${item}</span><br>`;
+
     $(".quizAnswers").append(template);
   });
 }
@@ -193,14 +196,14 @@ function createIncorrectFeedbackView(){
 function createPassView(){
   const numberCorrect = stateGetCorrectAnswerCount();
   return `<h3>You Passed!!! Score: ${numberCorrect}/${questionsArray.length}</h3>
-        <img src="https://media.giphy.com/media/zGnnFpOB1OjMQ/giphy.gif" id="resultsImage"><br>
+        <img src="https://media.giphy.com/media/zGnnFpOB1OjMQ/giphy.gif" id="resultsImage" alt="You Passed"><br>
         <button id="restartQuiz">Try again?</button>`;
 }
 
 function createFailView(){
   const numberCorrect = stateGetCorrectAnswerCount();
   return `<h3>You Failed. Score: ${numberCorrect}/${questionsArray.length}</h3>
-          <img src="http://33.media.tumblr.com/5b2b782f40181ba1de4ed7d74e48abaa/tumblr_nk10g3LdNz1rp0vkjo1_500.gif" id="resultsImage"><br>
+          <img src="http://33.media.tumblr.com/5b2b782f40181ba1de4ed7d74e48abaa/tumblr_nk10g3LdNz1rp0vkjo1_500.gif" id="resultsImage" alt="You Failed"><br>
           <button id="restartQuiz">Try again?</button>`; 
 }
 

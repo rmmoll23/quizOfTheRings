@@ -10,6 +10,7 @@ body {
 	width: 75%;
 	margin: auto;
 	margin-bottom: 30px;
+	max-width: 900px;
 }
 
 header {
@@ -22,20 +23,33 @@ header {
 	margin: auto;
 }
 
+.questionText {
+	font-size: 20px;
+}
+
+span {
+	font-size: 20px;
+}
+
+.questionInfo span {
+	font-size: 15px;
+}
+
 .quizContainer {
 	display: flex;
-	padding: 40px 40px 40px 40px;
+	padding: 40px 0px;
 	background-color: white;
 	font-weight: bold;
-	font-size: 4vw;
+	font-size: 20px;
 	border: solid black 2px;
 	border-radius: 10px;
 	margin: 30px 0 30px 0;
 }
 
-#quizcard {
+#quizCard {
 	font-size: 4vw;
-	width: 100%;
+	width: 90%;
+	margin: 0 auto;
 }
 
 #homeIMG {
@@ -45,9 +59,10 @@ header {
 button {
 	background-color: lightgray;
 	font-weight: bold;
-	font-size: 3vw;
+	font-size: 15px;
 	cursor: pointer;
-	padding: 5px;
+	padding: 5px 7px;
+	border-radius: 5px;
 }
 
 .hidden {
@@ -63,8 +78,10 @@ form {
 	float:left;
 	background-color: lightgray;
 	font-weight: bold;
-	font-size: 3vw;
-	padding: 5px;
+	font-size: 15px;
+	padding: 5px 7px;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .questionInfo {
@@ -79,7 +96,8 @@ form {
 }
 
 .buttonFeedback {
-	font-size: 3vw;
+	font-size: 15px;
+	margin-top: 20px;
 }
 
 #imgFeedback {
@@ -87,11 +105,13 @@ form {
 }
 
 #finalResults {
-	margin: auto;
+	margin: 0 auto;
+	width: 90%;
 }
 
 #resultsImage {
 	width: 100%;
+	margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 640px) {
@@ -101,15 +121,30 @@ form {
   }
 
   .quizContainer {
-  	font-size: 25px;
+	  font-size: 25px;
+	  padding: 40px 40px 40px 40px;
+  }
+
+  span {
+	  font-size: 25px;
+  }
+
+  .questionText {
+	  font-size: 25px;
+  }
+
+  .questionInfo span {
+	  font-size: 20px;
   }
 
   #homeIMG {
-    width: 350px;
+	width: 350px;
+	height: 300px;
   }
   
-  #quizcard {
+  #quizCard {
 	font-size: 2vw;
+	width: 100%;
   }
  
   button {
@@ -118,6 +153,11 @@ form {
 
   #submitAnswer {
   	font-size: 2vw;
+  }
+
+  input {
+	  cursor: pointer;
+	  font-size: 15px;
   }
 
   .questionInfo {
@@ -134,7 +174,7 @@ form {
 
   #imgFeedback {
 	width: 400px;
-	height: 400px;
+	height: 300px;
   }
 
 }
