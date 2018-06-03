@@ -5,6 +5,10 @@ Live previews
 https://rmmoll23.github.io/quizOfTheRings/index.html
 
 Screenshots: 
+<img width="1440" alt="landingpage" src="https://user-images.githubusercontent.com/33381445/40890855-2d60c0aa-6742-11e8-92f7-a842faebdfd2.png">
+<img width="1440" alt="questionpage" src="https://user-images.githubusercontent.com/33381445/40890856-301575b6-6742-11e8-8111-fc6f58c4e910.png">
+<img width="1440" alt="feedbackpage" src="https://user-images.githubusercontent.com/33381445/40890858-349cf5b4-6742-11e8-9412-1bce208d9473.png">
+<img width="1440" alt="resultspage" src="https://user-images.githubusercontent.com/33381445/40890859-37c14fd8-6742-11e8-8c0d-ff49bb457ac8.png">
 
 
 Summary: landingPage- On this page the user has the ability to start the quiz
