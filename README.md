@@ -6,6 +6,7 @@ https://rmmoll23.github.io/quizOfTheRings/index.html
 
 Screenshots: 
 
+
 Summary: landingPage- On this page the user has the ability to start the quiz
 
 questionPage- On this page the user has the ability to choose one of four possible answers to a the specific question to submit.  The user will be able to see a count of the number answered correctly and what question number they are on.
