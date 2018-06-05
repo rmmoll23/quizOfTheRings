@@ -160,6 +160,34 @@ form {
 	  font-size: 15px;
   }
 
+  #start {
+	  display: block;
+	  margin: 10px auto;
+  }
+
+  li a {
+	  color: white;
+	  text-decoration: none;
+  }
+
+  li a:hover {
+	  text-decoration: underline;
+  }
+
+  footer {
+	  color: white;
+  }
+
+  footer ul {
+	  list-style-type: none;
+	  padding-left: 0px;
+  }
+
+  footer li {
+	  display: inline;
+	  padding: 0px 10px;
+  }
+
   .questionInfo {
   	font-size: 2vw;
   }
